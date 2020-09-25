@@ -5,48 +5,99 @@
 
     <div class="container">
       <div class="row">
-        <div class="col">1 of 3</div>
-        <div class="col-2">2 of 3 (wider)</div>
-        <div class="col">3 of 3</div>
+        <div class="col">
+          <SelectableItem :name="item.name" :url="item.url" :imgWidth="50" />
+        </div>
+        <div class="col-2">
+          <SelectableItem :name="item.name" :url="item.url" :imgWidth="50" />
+        </div>
+        <div class="col">
+          <SelectableItem :name="item.name" :url="item.url" :imgWidth="50" />
+        </div>
       </div>
       <div class="row">
-        <div class="col">1 of 3</div>
+        <div class="col">
+          <SelectableItem :name="item.name" :url="item.url" :imgWidth="50" />
+        </div>
         <div class="col-5">
           <div class="container">
             <div class="row">
-              <div class="col">1 of 3</div>
-              <div class="col-5">2 of 3 (wider)</div>
-              <div class="col">3 of 3</div>
+              <div class="col">
+                <SelectableItem
+                  :name="item.name"
+                  :url="item.url"
+                  :imgWidth="50"
+                />
+              </div>
+              <div class="col-5">
+                <SelectableItem
+                  :name="item.name"
+                  :url="item.url"
+                  :imgWidth="50"
+                />
+              </div>
+              <div class="col">
+                <SelectableItem
+                  :name="item.name"
+                  :url="item.url"
+                  :imgWidth="50"
+                />
+              </div>
             </div>
             <div class="row">
-              <div class="col">1 of 3</div>
-              <div class="col-5">2 of 3 (wider)</div>
-              <div class="col">3 of 3</div>
+              <div class="col">
+                <SelectableItem
+                  :name="item.name"
+                  :url="item.url"
+                  :imgWidth="50"
+                />
+              </div>
+              <div class="col-5">
+                <SelectableItem
+                  :name="item.name"
+                  :url="item.url"
+                  :imgWidth="50"
+                />
+              </div>
+              <div class="col">
+                <SelectableItem
+                  :name="item.name"
+                  :url="item.url"
+                  :imgWidth="50"
+                />
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- <div class="col">
-          <SelectableItem :name="item.name" :url="item.url" />
-        </div>
-
-        <div class="col">
-          <SelectableItem :name="item.name" :url="item.url" />
-        </div> -->
-
         <div class="col">
           <div class="row">
             <div class="col-6">
-              <SelectableItem :name="item.name" :url="item.url" />
+              <SelectableItem
+                :name="item.name"
+                :url="item.url"
+                :imgWidth="50"
+              />
             </div>
             <div class="col-6">
-              <SelectableItem :name="item.name" :url="item.url" />
+              <SelectableItem
+                :name="item.name"
+                :url="item.url"
+                :imgWidth="50"
+              />
             </div>
             <div class="col-6">
-              <SelectableItem :name="SecondItem.name" :url="SecondItem.url" />
+              <SelectableItem
+                :name="SecondItem.name"
+                :url="SecondItem.url"
+                :imgWidth="50"
+              />
             </div>
             <div class="col-6">
-              <SelectableItem :name="SecondItem.name" :url="SecondItem.url" />
+              <SelectableItem
+                :name="SecondItem.name"
+                :url="SecondItem.url"
+                :imgWidth="50"
+              />
             </div>
           </div>
         </div>
@@ -71,11 +122,13 @@ export default {
         name: "Arduino UNO",
         url:
           "https://cdn.pixabay.com/photo/2017/03/23/12/32/arduino-2168193_1280.png",
+        imgWidth: 100,
       },
       SecondItem: {
         name: "Arduino MEGA",
         url:
           "https://www.pngkey.com/png/full/207-2079814_bustedtheory-servo-motor-arduino-mega.png",
+        imgWidth: 50,
       },
     };
   },

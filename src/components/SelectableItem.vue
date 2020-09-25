@@ -1,7 +1,7 @@
 <template>
   <div id="SelectableItem">
     <p align="center">{{ name }}</p>
-    <img :src="url" alt="Arduino image" width="50" />
+    <img :src="url" alt="Arduino image" :width="imgWidth" />
   </div>
 </template>
 
@@ -11,6 +11,7 @@ export default {
   props: {
     name: String,
     url: String,
+    imgWidth: Number,
   },
 };
 </script>
