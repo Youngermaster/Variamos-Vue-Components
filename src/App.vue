@@ -3,8 +3,6 @@
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Item selector Variamos" />
 
-    <AccountInfo :username="user.username" />
-
     <div class="container">
       <div class="row">
         <div class="col">1 of 3</div>
@@ -28,14 +26,13 @@
           </div>
         </div>
 
-        <div class="col">
-          <p align="center">Arduino UNO</p>
-          <img
-            src="./assets/arduino-uno.png"
-            alt="Arduino Uno image"
-            width="50"
-          />
+        <!-- <div class="col">
+          <SelectableItem :name="item.name" :url="item.url" />
         </div>
+
+        <div class="col">
+          <SelectableItem :name="item.name" :url="item.url" />
+        </div> -->
 
         <div class="col">
           <div class="row">
@@ -43,41 +40,42 @@
               <SelectableItem :name="item.name" :url="item.url" />
             </div>
             <div class="col-6">
-              <p align="center">Arduino MEGA</p>
-              <img
-                src="./assets/arduino-uno.png"
-                alt="Arduino Uno image"
-                width="50"
-              />
+              <SelectableItem :name="item.name" :url="item.url" />
+            </div>
+            <div class="col-6">
+              <SelectableItem :name="SecondItem.name" :url="SecondItem.url" />
+            </div>
+            <div class="col-6">
+              <SelectableItem :name="SecondItem.name" :url="SecondItem.url" />
             </div>
           </div>
         </div>
       </div>
-      <p>Test</p>
     </div>
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
-import AccountInfo from "./components/AccountInfo.vue";
 import SelectableItem from "./components/SelectableItem.vue";
 
 export default {
   name: "App",
   components: {
     HelloWorld,
-    AccountInfo,
     SelectableItem,
   },
   data() {
     return {
-      user: {
-        username: "Juan",
-      },
       item: {
         name: "Arduino UNO",
-        url: "arduino-2168193_1280.png",
+        url:
+          "https://cdn.pixabay.com/photo/2017/03/23/12/32/arduino-2168193_1280.png",
+      },
+      SecondItem: {
+        name: "Arduino MEGA",
+        url:
+          "https://www.pngkey.com/png/full/207-2079814_bustedtheory-servo-motor-arduino-mega.png",
       },
     };
   },
@@ -95,7 +93,7 @@ export default {
 }
 
 .row div {
-  /* border: 1px solid #34495E;
-  background-color: #41B883; */
+  border: 1px solid #34495e;
+  background-color: #41b883;
 }
 </style>
